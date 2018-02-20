@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+  
+    background-color: gray;
+    clear: left;
+    text-align: center;
+}
+
+</style>
+<script language="javascript">
+function getvalues()
+{
+document.getElementById('display').innerHTML="firstname:"+document.frm1.firstname.value;
+document.getElementById('display1').innerHTML="lastname:"+document.frm1.lastname.value;
+document.getElementById('display2').innerHTML="email:"+document.frm1.email.value;
+document.getElementById('display3').innerHTML="mobileno:"+document.frm1.mobileno.value;
+
+}
+</script>
+</head>
+<header>
+   <h1>STUDENT REGISTRATION</h1>
+
+</header>
+<body>
+
+<form  action='#' name="frm1">
+<p id="display"></p>
+<p id="display1"></p>
+<p id="display2"></p>
+<p id="display3"></p>
+      <fieldset>
+        <legend>Form</legend>
+        <p>
+          <label>First Name</label>
+          <input type = "text"
+                 id = "myText" name="firstname" />
+        </p>
+	<p>
+          <label>Last Name</label>
+          <input type = "text"
+                 id = "myText1" name="lastname" />
+        </p>
+	<p>
+          <label>Date of Birth </label>
+          
+        </p>
+	<p>
+          <label>Email Id</label>
+          <input type = "text"
+                 name = "email" />
+        </p>
+	<p>
+          <label>Mobile Number</label>
+          <input type = "text"
+                 name = "mobileno" />
+        </p>
+	<p>
+          <label>Gender </label>
+          <input type="radio" name="gender" value="male"> Male<br>
+  <input type="radio" name="gender" value="female"> Female<br>
+  <input type="radio" name="gender" value="other"> Other
+        </p>
+<p>
+         <label>Description </label>
+<textarea rows="4" cols="50">
+
+</textarea>
+</p>
+<p>
+<lable>Department</lable>
+<select name="Department">
+                <option value="double chocolate">CSE</option>
+                <option value="vanilla">ECE</option>
+                <option value="strawberry">IT</option>
+                <option value="caramel">MECH</option>
+        </select>
+
+</p>
+<p>
+
+          <input type="button" onclick="getvalues();return false;"value="Submit">
+</p>
+<p>
+          <button type="button" name="Cancel">Cancel</button> 
+</p>
+
+        
+      </fieldset>
+    </form>
+<p>  </p>
+
+</body>
+</html>
+
+
