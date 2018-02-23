@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<script src="angular.min.js"></script>
+<script>
+var app= angular.module('AddName',[]);
+app.controller('Add',function($scope){
+$scope.name=";
+$scope.lastname=";
+$scope.users=[];
+$scope.addName=function(){
+alert("hi");
+var user1={
+	"name":$scope.name,
+	"lastname":$scope.lastname
+}
+return $scope.users.push(user1);
+}
+});
+</script>
+<body>
+
+<div ng-app="AddName" ng-controller="Add">
+  <p>Name: <input type="text" ng-model="name"></p>
+  <p>lastName: <input type="text" ng-model="lastName"></p>
+  <button ng-click="addName()">Add</button>
+  <button ng-click="addName()">Delete</button>
+ 
+  <table>
+  <tr>
+  <td>FirstName</td>
+  <td>lastName</td>
+  </tr>
+  <tr ng-repeat="p in users">
+  <td>{{p.name}}</td>
+  <td>{{p.lastName}}</td>
+  <td></td>
+  </tr>
+  </table>
+  
+</div>
+
+
+
+</body>
+</html>
+

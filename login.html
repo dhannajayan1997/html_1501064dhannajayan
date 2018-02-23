@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="angular.min.js"></script>
+<script>
+angular.module('Sat',[]).controller('firstController',function($scope,$rootScope){
+
+$scope.Login=true;
+$rootScope.homepage=false;
+$scope.click=[];
+$scope.click1=function(){
+if($scope.name == "admin" && $scope.password == "1234")
+{
+$scope.Login=false;
+$rootScope.homepage=true;
+$scope.Msg3=false;
+}
+else
+{
+$scope.Login=true;
+$rootScope.homepage=false;
+$scope.Msg3=true;
+}
+}
+})
+.controller('secondController',function($scope,$rootScope){
+
+});
+</script>
+</head>
+<body ng-app="Sat">
+  <div ng-controller="firstController" ng-show="Login">
+    <h2>User Account</h2>
+    <p>userName: <input type="text" ng-model="name"></p>
+	<br />
+     <p>password: <input type="text" ng-model="password"></p>
+    <br />
+	<font size="3" color="red" ng-model="Msg3" ng-show="Msg3">Invalid User</font>
+	<br />
+    <button ng-click="click1()" ng-model="mustShow" >Login</button>
+	<br />
+  </div>
+  <div ng-controller="secondController" ng-show="homepage">
+  <p>Welcome to Jungle</p>
+  <div ng-show="mustShow">
+  
+  </div>
+  </div>
+  </body>
+</html>
