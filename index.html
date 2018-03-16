@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Website Layout</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+
+.header {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+}
+
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 15px;
+}
+
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media (max-width:600px) {
+    .column {
+        width: 100%;
+    }
+}
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Avengers</h1>
+   <img src="angular.jpg" alt="Forest" width="1110" height="1110">
+</div>
+
+<div class="topnav">
+  <a href="#">war</a>
+  <a href="#">members</a>
+  <a href="#">Avengers</a>
+</div>
+
+<div class="row">
+  
+    
+   <div class="column">
+    <h2>Column</h2>
+    <p> is an upcoming American superhero film based on the Marvel Comics superhero team the Avengers, produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures. It is intended to be the sequel to 2012's Marvel's The Avengers and 2015's Avengers: Age of Ultron and the nineteenth film in the Marvel Cinematic Universe (MCU). The film is directed by Anthony and Joe Russo, with a screenplay by the writing team of Christopher Markus and Stephen McFeely, and features an ensemble cast with many actors from previous MCU films. In Avengers: Infinity War, the Avengers join forces with the Guardians of the Galaxy to stop Thanos, who is trying to collect the Infinity Stones.</p>
+</div>
+
+</body>
+</html>
